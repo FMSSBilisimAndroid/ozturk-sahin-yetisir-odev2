@@ -23,7 +23,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ellipse_4"
-            android:background="@color/white"/>
+            android:background="?android:attr/selectableItemBackground"/>
 
         <ImageView
             android:id="@+id/backImage2"

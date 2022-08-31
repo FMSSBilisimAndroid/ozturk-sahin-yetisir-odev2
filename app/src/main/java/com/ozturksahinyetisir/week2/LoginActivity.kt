@@ -42,6 +42,8 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(LastIntent)
             }else if((loginUsername.isEmpty()) || loginPw.isEmpty()) {
                 Toast.makeText(this, "username & password cannot be left blank ", Toast.LENGTH_SHORT).show()
+            }else if((usernameveri == "") || (passwordveri == "")){
+                Toast.makeText(this, "Go Register Page", Toast.LENGTH_SHORT).show()
             }else{
                 Toast.makeText(this, "Incorrect id or password", Toast.LENGTH_SHORT).show()
             }
