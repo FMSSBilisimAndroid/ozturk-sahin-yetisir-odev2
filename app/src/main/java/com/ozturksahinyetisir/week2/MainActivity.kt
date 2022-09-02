@@ -11,6 +11,7 @@ import com.ozturksahinyetisir.week2.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     private lateinit var binding:ActivityMainBinding
     private lateinit var LoginIntent: Intent
+
     lateinit var preferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,10 +20,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        var SharedPreferences = this.getSharedPreferences("userdata", MODE_PRIVATE)
+        /**
+         * @param LoginIntent creates new intent LoginActivity page
+         * @param LoginIntent creates new intent LoginActivity page
+        */
+        preferences = getSharedPreferences("userdata", MODE_PRIVATE)
 
         LoginIntent = Intent(this,LoginActivity::class.java)
-
+        /**
+         * @return startActivity for going to LoginIntent LoginActivity page
+         */
         binding.joinnowbutton.setOnClickListener {
             startActivity(LoginIntent)
         }

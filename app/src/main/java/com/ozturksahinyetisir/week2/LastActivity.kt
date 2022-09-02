@@ -12,7 +12,9 @@ class LastActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityLastBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        /**
+         * Change TextView with usernameveri who logged in and set it all done.
+         */
         preferences = getSharedPreferences("userdata", MODE_PRIVATE)
         var usernameveri = preferences.getString("usernameid","")
 
